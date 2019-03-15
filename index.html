@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/ui.css">
+		<link rel="stylesheet" href="css/animate.css" />
+		<script type="application/javascript" src="js/jquery.js"></script>
+		<script type="application/javascript" src="js/jquery.navigation.rt.js"></script>
+	</head>
+
+	<body style="background-color: #000000;">
+		<div id="hgt_category_parent">
+
+		</div>
+		<script>
+			$(function() {
+				var data = [{
+						id: "cl",
+						title: "测量",
+						normalImage: "measure-normal.png",
+						selectImage: "measure-select.png",
+						iconImage: "measure-icon.png",
+						childrens: [{
+								id: 'kjjl',
+								title: "空间距离",
+								text: "空间距离",
+								childrens: [{
+									id: 'cs1',
+									title: "测试1",
+									text: "测试1",
+									isLeaf: true
+								}, {
+									id: 'cs2',
+									title: "测试2",
+									text: "测试2",
+									isLeaf: true
+								}]
+							},
+							{
+								id: 'dbjl',
+								title: "地表距离",
+								text: "地表距离",
+								childrens: [{
+									id: 'cs21',
+									title: "测试21",
+									text: "测试21",
+									isLeaf: true
+								}, {
+									id: 'cs22',
+									title: "测试22",
+									text: "测试22",
+									isLeaf: true
+								}]
+							},
+							{
+								id: 'kjmj',
+								title: "空间面积",
+								text: "空间面积",
+								childrens: []
+							},
+						]
+					},
+					{
+						id: 'sj',
+						title: "数据",
+						normalImage: "data-normal.png",
+						selectImage: "data-select.png",
+						iconImage: "data-icon.png",
+						childrens: [{
+								id: 'kjjl',
+								title: "空间距离",
+								text: "空间距离",
+								childrens: []
+							},
+							{
+								id: 'dbjl',
+								title: "地表距离",
+								text: "地表距离",
+								childrens: []
+							},
+							{
+								id: 'kjmj',
+								title: "空间面积",
+								text: "空间面积",
+								childrens: []
+							},
+						]
+					},
+					{
+						id: 'hj',
+						title: "环境",
+						normalImage: "layerinfo-normal.png",
+						selectImage: "data-select.png",
+						iconImage: "layerinfo-icon.png",
+						childrens: []
+					}
+				]
+
+				$("#hgt_category_parent").navigation({
+					"data": data,
+					"imageBaseUrl": "img/category/", //图片存放根目录
+					"onMenuClick": function(v) { //自定义子菜单点击处理函数
+						if(v.isLeaf) {
+							console.log(v);
+						} else {
+							$("#hgt_category_parent").navigation("updateMenuList", [{
+								id: '333',
+								title: "ajax222",
+								text: "ajax222",
+								childrens: [{
+										id: 'c1',
+										title: "1号车",
+										text: "1号车",
+										isLeaf: true
+									},
+									{
+									id: 'c2',
+										title: "2号车",
+										text: "2号车",
+										isLeaf: true
+									},
+									{
+										id: 'c3',
+										title: "3号车",
+										text: "3号车",
+										isLeaf: true
+									},
+									{
+										id: 'c4',
+										title: "1号车",
+										text: "1号车",
+										isLeaf: true
+									},
+									{
+									id: 'c5',
+										title: "2号车",
+										text: "2号车",
+										isLeaf: true
+									},
+									{
+										id: 'c6',
+										title: "3号车",
+										text: "3号车",
+										isLeaf: true
+									},
+									{
+										id: 'c7',
+										title: "1号车",
+										text: "1号车",
+										isLeaf: true
+									},
+									{
+									id: 'c8',
+										title: "2号车",
+										text: "2号车",
+										isLeaf: true
+									},
+									{
+										id: 'c9',
+										title: "3号车",
+										text: "3号车",
+										isLeaf: true
+									},
+									{
+										id: 'c10',
+										title: "1号车",
+										text: "1号车",
+										isLeaf: true
+									},
+									{
+									id: 'c11',
+										title: "2号车",
+										text: "2号车",
+										isLeaf: true
+									},
+									{
+										id: 'c12',
+										title: "3号车",
+										text: "3号车",
+										isLeaf: true
+									},
+									{
+										id: 'c13',
+										title: "1号车",
+										text: "1号车",
+										isLeaf: true
+									},
+									{
+									id: 'c14',
+										title: "2号车",
+										text: "2号车",
+										isLeaf: true
+									},
+									{
+										id: 'c15',
+										title: "3号车",
+										text: "3号车",
+										isLeaf: true
+									}
+									
+								]
+							}, {
+								id: '333',
+								title: "ajax333",
+								text: "ajax333",
+								isLeaf: true
+							}])
+						}
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>
